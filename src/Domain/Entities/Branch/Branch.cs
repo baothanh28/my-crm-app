@@ -13,4 +13,6 @@ public class Branch : BaseAuditableEntity<Guid>
     public int MaxCapacity { get; set; }
 
     public virtual BranchDetail BranchDetail { get; set; }
+
+    public virtual List<Category> CategoryList { get; set; }
 }

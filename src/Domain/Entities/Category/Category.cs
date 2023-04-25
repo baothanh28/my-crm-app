@@ -14,4 +14,5 @@ public class Category : BaseAuditableEntity<Guid>
 
     // Navigation property
     public virtual CategoryDetail CategoryDetail { get; set; }
+    public virtual List<Product>  Products { get; set; }
 }
