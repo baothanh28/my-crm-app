@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CRM.Domain.Entities.Product;
+namespace CRM.Domain.Entities;
 public class Product : BaseAuditableEntity<Guid>
 {
     public Guid Id { get; set; }
