@@ -1,9 +1,9 @@
 ﻿
 
 namespace CRM.Domain.Entities;
-public class Category : BaseAuditableEntity<Guid>
+public class Category : BaseAuditableEntity<int>
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
     public string Name { get; set; }
     public string Description { get; set; }
     public bool IsActive { get; set; }
@@ -11,8 +11,7 @@ public class Category : BaseAuditableEntity<Guid>
     public bool IsFeatured { get; set; }
     public int SortOrder { get; set; }
     public string ImageUrl { get; set; }
-
-    // Navigation property
-    public virtual CategoryDetail CategoryDetail { get; set; }
+    public int BranchId { get; set; }
+    public virtual Branch Branch { get; set; }
     public virtual List<Product>  Products { get; set; }
 }

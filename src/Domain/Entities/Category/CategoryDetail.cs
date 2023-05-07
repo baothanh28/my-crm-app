@@ -1,9 +1,9 @@
 ﻿
 
 namespace CRM.Domain.Entities;
-public class CategoryDetail : BaseAuditableEntity<Guid>
+public class CategoryDetail : BaseAuditableEntity<int>
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
     public int CategoryId { get; set; }
     public string Title { get; set; }
     public string Keywords { get; set; }
@@ -20,7 +20,4 @@ public class CategoryDetail : BaseAuditableEntity<Guid>
     public string MobileImageUrl { get; set; }
     public string AdditionalImages { get; set; }
     public string Videos { get; set; }
-
-    // Navigation property
-    public virtual Category Category { get; set; }
 }
