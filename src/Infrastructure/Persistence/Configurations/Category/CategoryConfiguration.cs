@@ -12,6 +12,8 @@ public class CategoryConfiguration : IEntityTypeConfiguration<Category>
         builder.Property(t => t.Name)
             .HasMaxLength(200)
             .IsRequired();
+        builder.Property(p => p.Discount)
+           .HasColumnType("decimal(18,2)");
         builder.HasOne(cd => cd.CategoryDetail)
           .WithOne()
           .HasForeignKey<CategoryDetail>(cd => cd.Id);

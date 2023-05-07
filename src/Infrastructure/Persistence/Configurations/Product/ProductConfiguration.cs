@@ -12,6 +12,8 @@ public class ProductConfiguration : IEntityTypeConfiguration<Product>
         builder.Property(t => t.Name)
             .HasMaxLength(200)
             .IsRequired();
+        builder.Property(p => p.Price)
+               .HasColumnType("decimal(18,2)");
         builder.HasOne(cd => cd.ProductDetail)
            .WithOne()
            .HasForeignKey<ProductDetail>(cd => cd.Id);
