@@ -14,7 +14,7 @@ public class CategoryConfiguration : IEntityTypeConfiguration<Category>
             .IsRequired();
         builder.HasOne(cd => cd.CategoryDetail)
           .WithOne(c => c.Category)
-          .HasForeignKey<Category>(cd => cd.Id);
+          .HasForeignKey<CategoryDetail>(cd => cd.Id);
 
     }
 }

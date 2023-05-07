@@ -15,7 +15,7 @@ public class BranchConfiguration : IEntityTypeConfiguration<Branch>
 
         builder.HasOne(cd => cd.BranchDetail)
            .WithOne(c => c.Branch)
-           .HasForeignKey<Branch>(cd => cd.Id);
+           .HasForeignKey<BranchDetail>(cd => cd.Id);
 
     }
 }

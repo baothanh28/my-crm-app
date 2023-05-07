@@ -14,7 +14,7 @@ public class ProductConfiguration : IEntityTypeConfiguration<Product>
             .IsRequired();
         builder.HasOne(cd => cd.ProductDetail)
            .WithOne(c => c.Product)
-           .HasForeignKey<Product>(cd => cd.Id);
+           .HasForeignKey<ProductDetail>(cd => cd.Id);
     }
 }
 public class ProductDetailConfiguration : IEntityTypeConfiguration<ProductDetail>
