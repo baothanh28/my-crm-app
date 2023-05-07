@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace CRM.Infrastructure.Persistence.Configurations;
+namespace CRM.Infrastructure.Persistence;
 
 public class TodoListConfiguration : IEntityTypeConfiguration<TodoList>
 {

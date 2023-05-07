@@ -29,12 +29,21 @@ public class ApplicationDbContext : ApiAuthorizationDbContext<ApplicationUser>, 
 
     public DbSet<TodoList> TodoLists => Set<TodoList>();
 
+
     public DbSet<TodoItem> TodoItems => Set<TodoItem>();
+    public DbSet<Branch> Branches => Set<Branch>();
+    public DbSet<BranchDetail> BranchDetails => Set<BranchDetail>();
+
+    public DbSet<Category> Categorys => Set<Category>();
+    public DbSet<CategoryDetail> CategoryDetails => Set<CategoryDetail>();
+
+    public DbSet<Product> Products => Set<Product>();
+    public DbSet<ProductDetail> ProductDetails => Set<ProductDetail>();
+
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
         builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
-
         base.OnModelCreating(builder);
     }
 

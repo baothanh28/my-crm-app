@@ -16,4 +16,5 @@ public class BranchDetail : BaseAuditableEntity<Guid>
     public string TwitterUrl { get; set; }
     public string InstagramUrl { get; set; }
     public string YoutubeUrl { get; set; }
+    public Branch Branch { get; set; }
 }

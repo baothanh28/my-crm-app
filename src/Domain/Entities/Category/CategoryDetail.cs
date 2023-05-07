@@ -20,4 +20,5 @@ public class CategoryDetail : BaseAuditableEntity<int>
     public string MobileImageUrl { get; set; }
     public string AdditionalImages { get; set; }
     public string Videos { get; set; }
+    public virtual Category Category { get; set; }
 }

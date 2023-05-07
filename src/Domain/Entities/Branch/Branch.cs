@@ -11,5 +11,6 @@ public class Branch : BaseAuditableEntity<Guid>
     public string ManagerName { get; set; }
     public bool IsActive { get; set; }
     public int MaxCapacity { get; set; }
+    public BranchDetail BranchDetail { get; set; }
     public virtual List<Category> CategoryList { get; set; }
 }
