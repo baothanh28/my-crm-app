@@ -3,7 +3,6 @@
 namespace CRM.Domain.Entities;
 public class ProductDetail : BaseAuditableEntity<Guid>
 {
-    public Guid Id { get; set; }
     public string ModelNumber { get; set; }
     public string Brand { get; set; }
     public string Color { get; set; }

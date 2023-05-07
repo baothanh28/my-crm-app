@@ -3,7 +3,6 @@
 namespace CRM.Domain.Entities;
 public class Branch : BaseAuditableEntity<int>
 {
-    public int Id { get; set; }
     public string Name { get; set; }
     public string Address { get; set; }
     public string Phone { get; set; }

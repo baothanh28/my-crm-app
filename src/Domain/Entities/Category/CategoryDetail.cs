@@ -3,7 +3,6 @@
 namespace CRM.Domain.Entities;
 public class CategoryDetail : BaseAuditableEntity<int>
 {
-    public int Id { get; set; }
     public int CategoryId { get; set; }
     public string Title { get; set; }
     public string Keywords { get; set; }

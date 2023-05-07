@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 namespace CRM.Domain.Entities;
 public class Product : BaseAuditableEntity<Guid>
 {
-    public Guid Id { get; set; }
     public string Name { get; set; }
     public decimal Price { get; set; }
     public int Quantity { get; set; }
