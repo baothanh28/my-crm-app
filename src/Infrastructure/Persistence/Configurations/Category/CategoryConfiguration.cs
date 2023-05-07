@@ -13,9 +13,12 @@ public class CategoryConfiguration : IEntityTypeConfiguration<Category>
             .HasMaxLength(200)
             .IsRequired();
         builder.HasOne(cd => cd.CategoryDetail)
-          .WithOne(c => c.Category)
+          .WithOne()
           .HasForeignKey<CategoryDetail>(cd => cd.Id);
-
+        builder
+           .HasMany(p => p.Products)
+           .WithOne(c=>c.Category)
+           .HasForeignKey(o => o.CategoryId);
     }
 }
 public class CategoryDetailConfiguration : IEntityTypeConfiguration<CategoryDetail>

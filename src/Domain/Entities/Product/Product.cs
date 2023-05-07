@@ -14,7 +14,7 @@ public class Product : BaseAuditableEntity<Guid>
     public string Description { get; set; }
     public bool IsActive { get; set; }
     public DateTime CreatedDate { get; set; }
-    public Guid CategoryId { get; set; }
+    public int CategoryId { get; set; }
     public virtual ProductDetail ProductDetail { get; set; }
     public virtual Category Category { get; set; }
 }

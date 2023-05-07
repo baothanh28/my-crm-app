@@ -13,7 +13,7 @@ public class ProductConfiguration : IEntityTypeConfiguration<Product>
             .HasMaxLength(200)
             .IsRequired();
         builder.HasOne(cd => cd.ProductDetail)
-           .WithOne(c => c.Product)
+           .WithOne()
            .HasForeignKey<ProductDetail>(cd => cd.Id);
     }
 }

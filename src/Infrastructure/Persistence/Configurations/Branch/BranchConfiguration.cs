@@ -14,8 +14,13 @@ public class BranchConfiguration : IEntityTypeConfiguration<Branch>
             .IsRequired();
 
         builder.HasOne(cd => cd.BranchDetail)
-           .WithOne(c => c.Branch)
+           .WithOne()
            .HasForeignKey<BranchDetail>(cd => cd.Id);
+
+        builder
+         .HasMany(c => c.CategoryList)
+         .WithOne(b=>b.Branch)
+         .HasForeignKey(o => o.BranchId);
 
     }
 }

@@ -1,9 +1,9 @@
 ﻿
 namespace CRM.Domain.Entities;
 
-public class BranchDetail : BaseAuditableEntity<Guid>
+public class BranchDetail : BaseAuditableEntity<int>
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
     public string Description { get; set; }
     public string ManagerName { get; set; }
     public string ManagerPhoneNumber { get; set; }
@@ -16,5 +16,5 @@ public class BranchDetail : BaseAuditableEntity<Guid>
     public string TwitterUrl { get; set; }
     public string InstagramUrl { get; set; }
     public string YoutubeUrl { get; set; }
-    public Branch Branch { get; set; }
+    //public Branch Branch { get; set; }
 }

@@ -1,9 +1,9 @@
 ﻿
 
 namespace CRM.Domain.Entities;
-public class Branch : BaseAuditableEntity<Guid>
+public class Branch : BaseAuditableEntity<int>
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
     public string Name { get; set; }
     public string Address { get; set; }
     public string Phone { get; set; }
@@ -12,5 +12,5 @@ public class Branch : BaseAuditableEntity<Guid>
     public bool IsActive { get; set; }
     public int MaxCapacity { get; set; }
     public BranchDetail BranchDetail { get; set; }
-    public virtual List<Category> CategoryList { get; set; }
+    public virtual IList<Category> CategoryList { get; set; }
 }

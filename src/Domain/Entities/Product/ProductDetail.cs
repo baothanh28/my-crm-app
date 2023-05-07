@@ -21,6 +21,6 @@ public class ProductDetail : BaseAuditableEntity<Guid>
     public DateTime LastModifiedDate { get; set; }
     public string Features { get; set; }
     public string Specifications { get; set; }
-    public virtual Product Product { get; set; }
+    //public virtual Product Product { get; set; }
 
 }
